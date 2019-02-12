@@ -12,21 +12,26 @@ public class Client {
     }
 
     public void performOperation(ToDoList list){
-        Scanner scanner = new Scanner(System.in);
-        Operation operation = convertInputInOperation(scanner.nextInt());
         while(true){
+            System.out.println("Please insert a valid operation:");
+            System.out.println("1) Add a new task");
+            System.out.println("2) Remove a task");
+            System.out.println("3) Show all tasks");
+            Scanner scanner = new Scanner(System.in);
+            Operation operation = convertInputInOperation(scanner.nextInt());
             switch (operation){
                 case ADD:
-                    //list.add();
+                    list.addNewTask();
+                    System.out.println("Task successfully added!");
                     break;
                 case REMOVE:
-                    //list.remove()
+                    list.removeTask();
                     break;
                 case SHOW:
-                    //list.show()
+                    list.showTask();
                     break;
                 case UNKNOWN:
-                    //Handle error
+                    System.out.println("ERROR");
                     break;
             }
         }
@@ -57,10 +62,7 @@ public class Client {
             System.out.print("#");
         }
         System.out.print("\n");
-        System.out.println("Please insert a valid operation:");
-        System.out.println("1) Add a new task");
-        System.out.println("2) Remove a task");
-        System.out.println("3) Show all tasks");
+
     }
 
 }
