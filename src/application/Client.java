@@ -1,4 +1,8 @@
+package application;
+
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -11,12 +15,10 @@ public class Client extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        AnchorPane anchorPane = new AnchorPane();
-        Scene scene = new Scene(anchorPane);
+        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
+        Scene scene = new Scene(root,500, 600);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("TO DO LIST");
-        primaryStage.setHeight(500);
-        primaryStage.setWidth(500);
+        primaryStage.setTitle("To Do List");
         primaryStage.show();
     }
 }

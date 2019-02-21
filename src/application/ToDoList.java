@@ -1,3 +1,5 @@
+package application;
+
 import java.util.*;
 
 public class ToDoList {
@@ -37,7 +39,7 @@ public class ToDoList {
                 }
             }
             sortListAfterDeleting();
-            System.out.println("Task deleted");
+            System.out.println("application.Task deleted");
             System.out.println("YOUR UPDATED LIST");
             showTask();
         }
