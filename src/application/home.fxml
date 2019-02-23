@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="70.0" prefWidth="560.0" text="To Do List">
@@ -22,14 +21,14 @@
             <Font name="SF Pro Text Medium" size="15.0" />
          </font>
       </Label>
-      <TextField alignment="TOP_LEFT" layoutX="23.0" layoutY="127.0" prefHeight="141.0" prefWidth="263.0" promptText="Work out at..." />
-      <Button layoutX="91.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="128.0" text="Add task" />
+      <TextField fx:id="taskField" alignment="TOP_LEFT" layoutX="23.0" layoutY="127.0" prefHeight="141.0" prefWidth="263.0" promptText="Work out at..." />
+      <Button layoutX="91.0" layoutY="298.0" mnemonicParsing="false" onAction="#addTask" prefHeight="37.0" prefWidth="128.0" text="Add task" />
       <Label alignment="CENTER" layoutX="311.0" layoutY="84.0" prefHeight="17.0" prefWidth="269.0" text="Tasks">
          <font>
             <Font name="SF Pro Text Medium" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="382.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="128.0" text="Delete task" />
-      <ListView layoutX="311.0" layoutY="127.0" prefHeight="141.0" prefWidth="269.0" />
+      <Button layoutX="382.0" layoutY="298.0" mnemonicParsing="false" onAction="#deleteTask" prefHeight="37.0" prefWidth="128.0" text="Delete task" />
+      <ListView fx:id="tasksList" layoutX="311.0" layoutY="127.0" prefHeight="141.0" prefWidth="269.0" />
    </children>
 </AnchorPane>
