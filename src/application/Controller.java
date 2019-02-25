@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Cell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
@@ -36,9 +37,9 @@ public class Controller{
 
     @FXML
     void deleteTask(ActionEvent event) {
-        tasksList.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        content.remove(tasksList.getSelectionModel().getSelectedItem());
         model.getList().remove(tasksList.getSelectionModel().getSelectedItem());
+        content.remove(tasksList.getSelectionModel().getSelectedItem());
+
     }
 
 }
